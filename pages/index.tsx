@@ -83,10 +83,9 @@ const Home: NextPage = () => {
         Powered by <code className={styles.codeInfoFooter}>Matheus Medeiros</code>
         {ListSocial.map((item, index) => (
           <>
-
-            <div key={index} style={{ paddingLeft: 10 }} >
+            <div style={{ paddingLeft: 10 }} >
               <a target='blank' href={item.url}>
-                <Image style={{ borderRadius: 8 }} src={item.img} width={130} height={50} alt="" />
+                <img style={{ borderRadius: 8 }} src={item.img} width={130} height={50} alt="" />
               </a>
             </div>
 

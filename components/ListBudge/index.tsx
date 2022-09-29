@@ -13,7 +13,7 @@ function ListBudge() {
         <>
           <div key={index} style={{ padding: 10 }} >
             <h4>{item.name}</h4>
-            <Image src={item.src} alt='' width={150} height={50} />
+            <img src={item.src} alt='' width={150} height={50} />
           </div>
         </>
       ))}
