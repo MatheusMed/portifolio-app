@@ -1,0 +1,18 @@
+.codeInfo{
+  display: flex;
+  background-color: #ec945d;
+  color: #181c29;
+  float: left;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 8px;
+  transition: transform 300ms;
+}
+.codeInfo:hover{
+  color: #181c29;
+  background-color: #e9c1a8;
+  transform: translateY(-5px);
+}

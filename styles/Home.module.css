@@ -7,8 +7,9 @@
 }
 
 .main {
-  min-height: 90vh;
-  padding: 4rem 0;
+  min-height: 85vh;
+  padding: 2rem 0;
+  
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -71,9 +72,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding-top: 7rem;
+  
 
+}
+.textSobre{
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: 25px;
 }
 
 .footer{
@@ -85,8 +94,8 @@
 
 .codeInfoFooter{
   display: flex;
-  background-color: #e05f0f;
-  color: #181c29;
+  background-color: #ec945d;
+  color: #e5e5e5;
   float: left;
   justify-content: center;
   align-items: center;

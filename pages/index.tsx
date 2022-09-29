@@ -5,13 +5,15 @@ import { useEffect, useRef, useState } from 'react'
 import styles from '../styles/Home.module.css'
 
 import 'animate.css';
+import InfoComponent from '../components/infoComponent'
+import ListBudge from '../components/ListBudge'
+import ListSocial from '../components/ListBudge/listaSocial';
 
 const Home: NextPage = () => {
 
 
-
-
   const [showAbout, setAbout] = useState(false);
+  const [showSkill, setSkill] = useState(false);
 
 
 
@@ -19,6 +21,15 @@ const Home: NextPage = () => {
 
 
     setAbout(!showAbout);
+    setSkill(false);
+
+  }
+
+  function handleSobreSill() {
+
+
+    setSkill(!showSkill);
+    setAbout(false);
 
   }
 
@@ -36,26 +47,31 @@ const Home: NextPage = () => {
 
 
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center" }} >
-          <div onClick={handleSobreInfo}   >
-            <code
-              className={styles.codeSobre}
-            >Sobre Min</code>
-          </div>
+          <InfoComponent text='Sobre Mim' onTap={handleSobreInfo} />
 
-          <div onClick={handleSobreInfo} >
-            <code
-              className={styles.codeInfo}
-            >Skills</code>
-          </div>
+
+          <InfoComponent text='Skills' onTap={handleSobreSill} />
+
         </div>
 
 
         {
           showAbout &&
           <div className={styles.ContainerSobre} >
-            <p>
-              ABOOUT
+            <p className={styles.textSobre} >
+              Oi, Meu nome é <a target='blank' href='https://www.linkedin.com/in/matheus-medeiros-4210871a6/'>Matheus </a>
+              Tenho 25 anos sou desenvolvedor Mobile / Web e também estudo
+              um pouco de Back End, estou me formando em análise e
+              desenvolvimento de sistemas pela faculdade UNOPAR;
             </p>
+
+          </div>
+        }
+
+        {
+          showSkill &&
+          <div className={styles.ContainerSobre} >
+            <ListBudge />
           </div>
         }
 
@@ -65,6 +81,17 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         Powered by <code className={styles.codeInfoFooter}>Matheus Medeiros</code>
+        {ListSocial.map((item, index) => (
+          <>
+
+            <div key={index} style={{ paddingLeft: 10 }} >
+              <a target='blank' href={item.url}>
+                <Image style={{ borderRadius: 8 }} src={item.img} width={130} height={50} alt="" />
+              </a>
+            </div>
+
+          </>
+        ))}
       </footer>
     </div>
   )
