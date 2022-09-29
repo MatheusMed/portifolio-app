@@ -81,16 +81,18 @@ const Home: NextPage = () => {
 
       <footer className={styles.footer}>
         Powered by <code className={styles.codeInfoFooter}>Matheus Medeiros</code>
-        {ListSocial.map((item, index) => (
-          <>
-            <div style={{ paddingLeft: 10 }} >
-              <a target='blank' href={item.url}>
-                <img style={{ borderRadius: 8 }} src={item.img} width={130} height={50} alt="" />
-              </a>
-            </div>
 
-          </>
+        {ListSocial.map((item, index) => (
+
+          <div key={index} style={{ paddingLeft: 10 }} >
+            <a target='blank' href={item.url}>
+              <img style={{ borderRadius: 8 }} src={item.img} width={130} height={50} alt="" />
+            </a>
+          </div>
+
+
         ))}
+
       </footer>
     </div>
   )
